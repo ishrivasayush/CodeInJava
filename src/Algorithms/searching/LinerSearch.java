@@ -1,6 +1,20 @@
 package Algorithms.searching;
 
 public class LinerSearch {
+    /*
+
+procedure linerSearch(A:List of elements,T: Target Element)
+    for i from 0 to n-1
+        if A[i] is equals to target than
+            return i
+        end if
+    end for
+    return -1
+end procedure
+
+Time Complexity O(n)
+
+ */
     public static void main(String[] args) {
 
         int nums[] ={5,6,7,8,9};

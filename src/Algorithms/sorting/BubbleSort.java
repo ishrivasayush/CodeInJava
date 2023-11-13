@@ -4,8 +4,19 @@ import java.util.Scanner;
 
 public class BubbleSort {
     /*
-    Time Complexity - O(n^2)
-     */
+procedure bubbleSort(arr: A list of elements, size: number of elements)
+    for i from 0 to n-1
+        for j from 0 to n-1-i
+            if A[j] is bigger than the A[j+1] than
+                swap(A[j],A[j+1);
+            end if
+        end for inner
+   end for outer
+end procedure
+
+ Time Complexity - O(n^2)
+    */
+
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
         System.out.println("Enter The Size Of Array : ");
