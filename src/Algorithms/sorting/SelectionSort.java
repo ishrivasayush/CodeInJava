@@ -2,6 +2,27 @@ package Algorithms.sorting;
 import java.util.Scanner;
 
 public class SelectionSort {
+    /*
+    procedure selectionSort( arr: List of elements, size: Number of elements in the list)
+        set minIndex=-1
+        for i from 0 to size-2
+            set minIndex=i
+                for j from i+1 to size-1
+                    if arr[minIndex]>arr[j]
+                        set minIndex=j
+                    end if
+                end for
+                swap(i,minIndex)
+       end for
+    end procedure
+
+    Time Complexity
+    O(n^2)
+
+
+
+
+     */
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
         System.out.println("Enter The Size Of Array : ");
