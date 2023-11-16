@@ -1,20 +1,30 @@
 package DataStructures.Stack;
 
-public class Stack {
-    int stack[]=new int[5];
+public class DynamicStack {
+    int capacity=2;
+    int stack[]=new int[capacity];
     int top=-1;
 
     public void push(int data)
     {
-        if (top==(stack.length-1))
+        if (size()==capacity)
         {
-            System.out.println("Stack is Full.");
+            expand();
         }
         else {
             top++;
             stack[top] = data;
         }
     }
+
+    private void expand() {
+        int length=size();
+        int newStack[]=new int[capacity*2];
+        System.arraycopy(stack,0,newStack,0,length);
+        stack=newStack;
+        capacity*=2;
+    }
+
     public int pop() {
         int data=0;
         if (top == -1) {
@@ -24,9 +34,22 @@ public class Stack {
             data = stack[top];
             stack[top] = 0;
             top--;
+            shrink();
         }
         return data;
     }
+
+    private void shrink() {
+        int length=size();
+        if (length<=(capacity/2)/2)
+        {
+            capacity=capacity/2;
+        }
+        int newStack[]=new int[capacity];
+        System.arraycopy(stack,0,newStack,0,length);
+        stack=newStack;
+    }
+
     public int peek()
     {
         return stack[top];
