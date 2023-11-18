@@ -20,7 +20,7 @@ public class BinaryTree {
         }
         else if(data< root.data)
         {
-            root.right=insertRec(data,root.left);
+            root.left=insertRec(data,root.left);
         }
 
         return root;
